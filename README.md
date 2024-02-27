@@ -1,2 +1,2 @@
 # csc5201-lab8-front-end
-Front end for CSC 5201 Lab 8
+Front end for [https://github.com/straslerj/csc5201-lab-8](https://github.com/straslerj/csc5201-lab-8)
