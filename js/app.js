@@ -15,7 +15,7 @@ function addUser() {
         return;
     }
 
-    fetch('http://127.0.0.1:8000/add_user', {
+    fetch('http://20.242.169.23:8000/add_user', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -44,7 +44,7 @@ function addUser() {
 
 // Function to fetch and render the user list
 function fetchUsers() {
-    fetch('http://127.0.0.1:8000/get_users')
+    fetch('http://20.242.169.23:8000/get_users')
         .then(response => response.json())
         .then(data => {
             const userTableBody = document.getElementById('userTableBody');
@@ -94,7 +94,7 @@ function fetchUsers() {
 
 function deleteUser(user_id) {
     if (confirm('Are you sure you want to delete this user?')) {
-        fetch(`http://127.0.0.1:8000/delete_user/${user_id}`, {
+        fetch(`http://20.242.169.23:8000/delete_user/${user_id}`, {
             method: 'POST',
         })
             .then(response => response.json())
@@ -121,7 +121,7 @@ function deleteUser(user_id) {
 
 // Function to fetch and update live information
 function fetchLiveUpdates() {
-    fetch('http://127.0.0.1:8000/closest_person')
+    fetch('http://20.242.169.23:8000/closest_person')
         .then(response => response.json())
         .then(data => {
             const liveUpdatesTableBody = document.getElementById('liveUpdatesTableBody');
@@ -152,7 +152,7 @@ function fetchLiveUpdates() {
             console.error('Error fetching closest person:', error);
         });
 
-    fetch('http://127.0.0.1:8000/furthest_person')
+    fetch('http://20.242.169.23:8000/furthest_person')
         .then(response => response.json())
         .then(data => {
             const liveUpdatesTableBody = document.getElementById('liveUpdatesTableBody');
